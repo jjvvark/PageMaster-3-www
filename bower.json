@@ -1,0 +1,23 @@
+{
+  "name": "gulping3",
+  "version": "0.0.0",
+  "authors": [
+    "Joost van Vark <joost@studiorogmans.nl>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "angular": "~1.4.7"
+  }
+}

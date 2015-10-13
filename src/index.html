@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<meta charset="utf-8">
+	<title>Angular, Gulp and Bower</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+	<nav ng-controller="navController as vm" ng-init="vm.init()">
+	</nav>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-3" ng-controller="listController as vm">
+				<div class="listItem" ng-repeat="host in vm.hosts" ng-bind="host|hostsFilter" ng-click="vm.setHost(host)" ng-class="{active:vm.isHost(host)}">
+				</div>
+			</div>
+			<div class="col-sm-9" ng-controller="contentController as vm">
+				<div class="well">
+					<form>
+						<div class="form-group">
+							<label for="selectScheme">Scheme</label>
+							<select ng-model="scheme" id="selectScheme" class="form-control" ng-options="(item?'https://':'http://') for item in [false, true]" ng-change="changeScheme()" ng-disabled="disabled"></select>
+						</div>
+						<div class="form-group">
+							<label for="inputHost">Host</label>
+							<input type="text" id="inputHost" class="form-control" ng-model="name" ng-disabled="disabled" ng-blur="changeName()" ng-keypress="enter($event)">
+						</div>
+						<div class="form-group">
+							<label for="inputTld">Tld</label>
+							<input type="text" id="inputTld" class="form-control" ng-model="tld" ng-disabled="disabled">
+						</div>
+						<div class="form-group">
+							<label for="inputPort">Port</label>
+							<input type="number" id="inputPort" class="form-control" ng-model="port" ng-disabled="disabled" ng-blur="changePort()" ng-keypress="enter($event)">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/angular.min.js"></script>
+	<script src="js/modules.js"></script>
+	<script src="js/services.js"></script>
+	<script src="js/controllers.js"></script>
+
+</body>
+</html>

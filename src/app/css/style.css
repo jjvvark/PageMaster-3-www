@@ -1,0 +1,21 @@
+.listItem {
+	display: block;
+	width: 100%;
+	height: 60px;
+	border-bottom: solid 1px #ccc;
+	border-left: solid 1px #ccc;
+	border-right: solid 1px #ccc;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 60px;
+	cursor: pointer;
+}
+
+.listItem:hover {
+	background-color: #eee;
+}
+
+.listItem.active {
+	background-color: #AF2D24;
+	color: white;
+}

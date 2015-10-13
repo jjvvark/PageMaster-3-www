@@ -1,0 +1,22 @@
+{
+  "name": "gulping3",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-debug": "^2.1.2",
+    "gulp-filter": "^3.0.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-rimraf": "^0.2.0",
+    "gulp-watch": "^4.3.5",
+    "main-bower-files": "^2.9.0",
+    "merge-stream": "^1.0.0"
+  }
+}
